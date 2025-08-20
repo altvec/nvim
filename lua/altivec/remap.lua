@@ -20,3 +20,10 @@ vim.keymap.set("n", "<leader>pc", insertFullPath, { noremap = true, silent = tru
 
 -- Escape to C-c
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Switch between windows
+-- <C-w>h switch window left
+-- <C-w>l switch window right
+-- <C-w>j switch window down
+-- <C-w>k switch window up
+
