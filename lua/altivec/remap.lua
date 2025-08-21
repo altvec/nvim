@@ -1,4 +1,8 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.g.have_nerd_font = true
+
 -- open file explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -18,12 +22,17 @@ function insertFullPath()
 end
 vim.keymap.set("n", "<leader>pc", insertFullPath, { noremap = true, silent = true })
 
--- Escape to C-c
+-- Escape to C-c (default is <C-[>)
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Switch between windows
--- <C-w>h switch window left
--- <C-w>l switch window right
--- <C-w>j switch window down
--- <C-w>k switch window up
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc ='Move focus to the left window' })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = 'Move focus to the right window' })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = 'Move focus to the lower window' })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = 'Move focus to the upper window' })
 
+-- Neotree show file
+vim.keymap.set("n", "<leader>fr", ":Neotree reveal<CR>", {})
+
+-- Clear highlights on search when pressing Esc in normal mode
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")

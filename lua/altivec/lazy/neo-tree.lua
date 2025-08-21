@@ -8,14 +8,26 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         lazy = false,
-        cmd = "Neotree",
         keys = {
-            {
-                "<leader>fe",
-                function()
-                    require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
-                end
+            { '\\', ':Neotree reveal<CR>', desc = 'Neotree reveal', silent = true },
+        },
+        opts = {
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    show_hidden_count = true,
+                    hide_dotfiles = false,
+                    hide_gitignored = true,
+                },
+                follow_current_file = {
+                    enabled = true,
+                },
+                window = {
+                    mappings = { 
+                        ['\\'] = 'close_window',
+                    },
+                },
             },
         },
-    }
+    },
 }
