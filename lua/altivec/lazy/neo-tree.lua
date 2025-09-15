@@ -26,6 +26,7 @@ return {
 					mappings = {
 						["\\"] = "close_window",
 					},
+                    position = "right",
 				},
 			},
 		},
