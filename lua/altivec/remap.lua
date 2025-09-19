@@ -20,7 +20,7 @@ function insertFullPath()
     local filepath = vim.fn.expand("%")
     vim.fn.setreg("+", filepath) -- write to clipboard
 end
-vim.keymap.set("n", "<leader>pc", insertFullPath, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>pc", insertFullPath, { noremap = true, silent = true, desc = "Copy file's path" })
 
 -- Escape to C-c (default is <C-[>)
 vim.keymap.set("i", "<C-c>", "<Esc>")
