@@ -7,7 +7,7 @@ return {
 		{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 	},
 	config = function()
-		require("telescope").setup({
+        require("telescope").setup({
 			extensions = {
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown(),

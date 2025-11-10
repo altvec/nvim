@@ -34,11 +34,15 @@ return {
 		config = function()
 			require("rose-pine").setup({
 				styles = {
-					italic = true,
+					italic = false,
 				},
 			})
 		end,
 	},
+  {
+    'shaunsingh/nord.nvim',
+    name = "nord",
+  },
 }
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -3,7 +3,7 @@ require("altivec.remap")
 require("altivec.lazy_init")
 
 -- Set colorscheme
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("nord")
 
 -- Netrw
 vim.g.netrw_browse_split = 0
